@@ -2,38 +2,34 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
 
 const ClientsSection = () => {
-const testimonials = [
-  {
-    name: "Anita Sharma",
-    position: "Managing Director, Fortune Group",
-    company: "Fortune Group",
-    testimonial: "Their investment strategies not only protected our capital during market volatility but also generated consistent growth. Truly invaluable expertise.",
-    rating: 5
-  },
-  {
-    name: "Rajiv Menon",
-    position: "CFO, Metro Holdings",
-    company: "Metro Holdings",
-    testimonial: "With their financial planning and risk management support, we reduced debt exposure and improved liquidity across all our subsidiaries.",
-    rating: 5
-  },
-  {
-    name: "Laura Williams",
-    position: "Founder, GreenFuture Ventures",
-    company: "GreenFuture Ventures",
-    testimonial: "They guided us through complex fundraising rounds and provided clear financial roadmaps. Our startup is now positioned for sustainable growth.",
-    rating: 5
-  }
-];
-
+  const testimonials = [
+    {
+      name: "Anita Sharma",
+      position: "Founder, CapitalBridge Ventures",
+      testimonial: "Ksheerabdhi helped us secure the right investors and streamline capital allocation. Their advisory transformed our funding approach.",
+      rating: 5
+    },
+    {
+      name: "Rajiv Menon",
+      position: "CEO, GrowthFund Corp",
+      testimonial: "Their strategic financial guidance enabled us to manage our funds efficiently and scale operations with confidence.",
+      rating: 5
+    },
+    {
+      name: "Laura Williams",
+      position: "Entrepreneur, GreenFuture Ventures",
+      testimonial: "With their insights, we successfully connected with lenders and investors, ensuring sustainable growth for our startup.",
+      rating: 5
+    }
+  ];
 
   const clientLogos = [
-    "Client logos",
-    "Client logos",
-    "Client logos",
-    "Client logos",
-    "Client logos",
-    "Client logos",
+    "Investor Group A",
+    "Venture Partners B",
+    "SME Alliance C",
+    "Capital Network D",
+    "Institution E",
+    "Private Fund F",
   ];
 
   return (
@@ -42,10 +38,9 @@ const testimonials = [
         {/* Client Logos - Marquee */}
         <div className="text-center mb-16">
           <h3 className="text-lg font-semibold text-muted-foreground mb-8">
-            Trusted by Leading Organizations
+            Trusted by Investors & Organizations
           </h3>
 
-          {/* Marquee wrapper */}
           <div className="relative w-full overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap">
               {clientLogos.concat(clientLogos).map((logo, index) => (
@@ -66,8 +61,7 @@ const testimonials = [
             What Our Clients Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Don&apos;t just take our word for it. Here&apos;s what our clients
-            have to say about working with us.
+            Hear from investors and businesses who have leveraged our expertise to connect with the right funding and investment opportunities.
           </p>
         </div>
 
@@ -99,9 +93,6 @@ const testimonials = [
                   </p>
                   <p className="text-sm text-muted-foreground">
                     {testimonial.position}
-                  </p>
-                  <p className="text-sm font-medium text-primary">
-                    {testimonial.company}
                   </p>
                 </div>
               </CardContent>

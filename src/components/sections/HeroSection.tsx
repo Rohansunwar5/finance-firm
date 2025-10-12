@@ -28,12 +28,12 @@ const HeroSection = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center text-white">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in slide-in-from-bottom-8 duration-1000">
-          Empowering Your Future
-          <span className="block text-accent">With Smart Financial Solutions</span>
+          Bridging Wealth & Opportunity
+          <span className="block text-accent">Through Smarter Investments</span>
         </h1>
         
         <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-          Comprehensive financial planning, investment strategies, and private advisory services designed to secure your wealth and grow your business with confidence.
+          At Ksheerabdhi Inc, we help individuals and businesses strategically grow their funds by connecting them with trusted networks and high-potential investment opportunities.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in slide-in-from-bottom-8 duration-1000 delay-600">
@@ -41,7 +41,7 @@ const HeroSection = () => {
             Explore Our Services
           </Button>
           <Button variant="heroSecondary" size="lg" onClick={() => scrollToSection('contact')}>
-            Get Expert Advice
+            Talk to an Expert
           </Button>
         </div>
       </div>

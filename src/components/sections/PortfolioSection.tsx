@@ -2,90 +2,91 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, TrendingUp, Users, Target } from 'lucide-react';
+import { ArrowUpRight, Rocket, BarChart3, Wrench } from 'lucide-react';
 
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
     { id: 'all', label: 'All Projects' },
-    { id: 'digital', label: 'Digital Transformation' },
-    { id: 'strategy', label: 'Strategic Planning' },
-    { id: 'operations', label: 'Operations' }
+    { id: 'product', label: 'Product Innovation' },
+    { id: 'growth', label: 'Growth & Scale' },
+    { id: 'operations', label: 'Operational Excellence' }
   ];
 
   const projects = [
     {
       id: 1,
-      category: 'digital',
-      title: "Global Bank Digital Transformation",
-      description: "Led comprehensive digital overhaul resulting in 40% improved customer satisfaction and $50M cost savings.",
-      impact: "+40% Customer Satisfaction",
-      savings: "$50M Cost Savings",
-      duration: "18 months",
-      tags: ["Digital Banking", "Process Automation", "Customer Experience"],
-      icon: <TrendingUp className="w-6 h-6" />
+      category: 'product',
+      title: "AI-driven Product Launch",
+      description: "Led the development and GTM strategy of a new AI-powered product suite, increasing market share and user adoption significantly.",
+      impact: "+60% User Growth",
+      savings: "3x Faster Launch Cycle",
+      duration: "9 months",
+      tags: ["AI/ML", "Product Strategy", "MVP Launch"],
+      icon: <Rocket className="w-6 h-6" />
     },
     {
       id: 2,
-      category: 'strategy',
-      title: "Retail Chain Expansion Strategy",
-      description: "Developed market entry strategy for 200+ new locations across 15 states, achieving 25% revenue growth.",
-      impact: "+25% Revenue Growth",
-      savings: "200+ New Locations",
-      duration: "12 months",
-      tags: ["Market Analysis", "Expansion Planning", "Revenue Growth"],
-      icon: <Target className="w-6 h-6" />
+      category: 'growth',
+      title: "Global Expansion Playbook",
+      description: "Designed and executed scalable market entry strategy enabling expansion across 12 countries with measurable revenue acceleration.",
+      impact: "+40% ARR Growth",
+      savings: "12 New Markets",
+      duration: "14 months",
+      tags: ["Market Strategy", "Growth", "Global Expansion"],
+      icon: <BarChart3 className="w-6 h-6" />
     },
     {
       id: 3,
       category: 'operations',
-      title: "Manufacturing Efficiency Optimization",
-      description: "Streamlined operations for Fortune 500 manufacturer, reducing waste by 35% and improving productivity.",
+      title: "Operational Cost Optimization",
+      description: "Restructured legacy workflows for a Fortune 500 firm, improving delivery timelines and reducing overhead costs.",
       impact: "+30% Productivity",
-      savings: "35% Waste Reduction",
-      duration: "8 months",
-      tags: ["Lean Manufacturing", "Process Optimization", "Sustainability"],
-      icon: <Users className="w-6 h-6" />
+      savings: "$25M Cost Savings",
+      duration: "10 months",
+      tags: ["Automation", "Efficiency", "Cost Reduction"],
+      icon: <Wrench className="w-6 h-6" />
     },
     {
       id: 4,
-      category: 'digital',
-      title: "E-commerce Platform Modernization",
-      description: "Modernized legacy systems for major e-commerce player, resulting in 60% faster page loads and improved conversion.",
-      impact: "+45% Conversion Rate",
-      savings: "60% Faster Performance",
-      duration: "10 months",
-      tags: ["E-commerce", "System Architecture", "Performance"],
-      icon: <TrendingUp className="w-6 h-6" />
+      category: 'product',
+      title: "E-commerce Performance Overhaul",
+      description: "Modernized a leading e-commerce platform’s infrastructure, resulting in faster experiences and stronger customer retention.",
+      impact: "+50% Conversion Rate",
+      savings: "70% Faster Load Time",
+      duration: "8 months",
+      tags: ["E-commerce", "Infra Modernization", "UX Optimization"],
+      icon: <Rocket className="w-6 h-6" />
     },
     {
       id: 5,
-      category: 'strategy',
-      title: "Healthcare Network Consolidation",
-      description: "Strategic merger guidance for regional healthcare network, achieving seamless integration and improved patient care.",
-      impact: "+50% Operational Efficiency",
-      savings: "$30M Synergies",
-      duration: "24 months",
-      tags: ["Healthcare", "M&A", "Integration"],
-      icon: <Target className="w-6 h-6" />
+      category: 'growth',
+      title: "Strategic M&A Integration",
+      description: "Orchestrated seamless post-merger integration of a healthcare network, aligning technology, operations, and patient care delivery.",
+      impact: "+45% Operational Synergy",
+      savings: "$40M Integration Value",
+      duration: "18 months",
+      tags: ["Healthcare", "M&A", "Strategy"],
+      icon: <BarChart3 className="w-6 h-6" />
     },
     {
       id: 6,
       category: 'operations',
-      title: "Supply Chain Resilience Program",
-      description: "Built robust supply chain framework reducing disruption risk by 70% and improving vendor relationships.",
-      impact: "70% Risk Reduction",
+      title: "Supply Chain Resilience Upgrade",
+      description: "Engineered robust supply chain systems to minimize disruption risks and increase supplier trust across geographies.",
+      impact: "75% Risk Reduction",
       savings: "+90% Vendor Satisfaction",
-      duration: "14 months",
-      tags: ["Supply Chain", "Risk Management", "Vendor Relations"],
-      icon: <Users className="w-6 h-6" />
+      duration: "12 months",
+      tags: ["Supply Chain", "Risk Management", "Resilience"],
+      icon: <Wrench className="w-6 h-6" />
     }
   ];
 
-  const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects =
+    activeCategory === 'all'
+      ? projects
+      : projects.filter(project => project.category === activeCategory);
 
   return (
     <section className="py-20 bg-background">
@@ -95,7 +96,7 @@ const PortfolioSection = () => {
             Success Stories
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-            Real results for real businesses. Explore how we've helped organizations transform and achieve their goals.
+            A proven record of delivering impact. Explore how we’ve helped startups and enterprises innovate, scale, and optimize their operations.
           </p>
         </div>
 
@@ -116,10 +117,13 @@ const PortfolioSection = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card 
+            <Card
               key={project.id}
               className="group hover:shadow-elegant transition-all duration-500 hover:-translate-y-2 border-border hover:border-primary/20 animate-in slide-in-from-bottom-8"
-              style={{ animationDelay: `${(index + 3) * 100}ms`, animationDuration: '800ms' }}
+              style={{
+                animationDelay: `${(index + 3) * 100}ms`,
+                animationDuration: '800ms'
+              }}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between mb-4">
@@ -135,7 +139,7 @@ const PortfolioSection = () => {
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              
+
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="text-center p-3 bg-secondary rounded-lg">
@@ -144,10 +148,10 @@ const PortfolioSection = () => {
                   </div>
                   <div className="text-center p-3 bg-secondary rounded-lg">
                     <div className="font-semibold text-primary">{project.savings}</div>
-                    <div className="text-muted-foreground">Achievement</div>
+                    <div className="text-muted-foreground">Outcome</div>
                   </div>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary" className="text-xs">
@@ -155,7 +159,7 @@ const PortfolioSection = () => {
                     </Badge>
                   ))}
                 </div>
-                
+
                 <div className="text-sm text-muted-foreground">
                   Duration: {project.duration}
                 </div>

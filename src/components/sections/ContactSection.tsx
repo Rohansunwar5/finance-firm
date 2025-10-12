@@ -11,26 +11,26 @@ const ContactSection = () => {
     console.log("Form submitted");
   };
 
-   const contactInfo = [
+  const contactInfo = [
     {
       icon: MapPin,
-      title: "Our Office",
-      details: ["15th Floor, Skyline Tower", "Wall Street, New York, NY 10005"]
+      title: "Our Headquarters",
+      details: ["Ksheerabdhi Inc.", "15th Floor, Skyline Tower", "Wall Street, New York, NY 10005"]
     },
     {
       icon: Phone,
-      title: "Speak With an Advisor",
+      title: "Investor & Partner Relations",
       details: ["+1 (212) 555-7890", "+1 (212) 555-4561"]
     },
     {
       icon: Mail,
       title: "Private Inquiries",
-      details: ["advisory@privatefinance.com", "wealth@privatefinance.com"]
+      details: ["contact@ksheerabdhi.com", "partners@ksheerabdhi.com"]
     },
     {
       icon: Clock,
-      title: "Advisory Hours",
-      details: ["Mon - Fri: 8:30 AM - 7:00 PM", "Sat: By Appointment Only"]
+      title: "Business Hours",
+      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: By Appointment Only"]
     }
   ];
 
@@ -39,10 +39,10 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-in slide-in-from-bottom-8 duration-1000">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-           Connect With Our Wealth Advisors
+            Connect With Ksheerabdhi Inc.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-             Secure your financial future with trusted guidance. Reach out to our private advisory team and discover tailored strategies to grow and protect your wealth.
+            Partner with us to explore investment and opportunities. Reach out to discuss funding solutions, strategic partnerships, or to get personalized advisory support.
           </p>
         </div>
         
@@ -76,7 +76,7 @@ const ContactSection = () => {
                 
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
-                    Company
+                    Company / Organization
                   </label>
                   <Input placeholder="Your Company Name" />
                 </div>
@@ -86,14 +86,14 @@ const ContactSection = () => {
                     Message
                   </label>
                   <Textarea 
-                    placeholder="Tell us about your project and how we can help..."
+                    placeholder="Describe your funding or investment needs..."
                     rows={5}
                     required
                   />
                 </div>
                 
                 <Button type="submit" variant="primary" size="lg" className="w-full">
-                  Send Message
+                  Submit Inquiry
                 </Button>
               </form>
             </CardContent>

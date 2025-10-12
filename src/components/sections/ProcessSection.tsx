@@ -4,31 +4,31 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 const ProcessSection = () => {
   const [activeStep, setActiveStep] = useState(0);
 
-   const steps = [
+  const steps = [
     {
-      title: "Financial Discovery",
-      description: "We begin by understanding your goals, current financial position, and long-term aspirations.",
-      icon: "💼"
+      title: "Discovery & Research",
+      description: "We start by understanding your business, market, and user needs to define clear goals and success metrics.",
+      icon: "🔍"
     },
     {
-      title: "Tailored Strategy",
-      description: "Our advisors design a personalized wealth strategy that balances growth, security, and tax efficiency.",
-      icon: "📊"
+      title: "Strategy & Roadmap",
+      description: "A tailored strategic plan is crafted — aligning product vision, technology, and business objectives.",
+      icon: "🧭"
     },
     {
-      title: "Implementation",
-      description: "We execute your investment and wealth plan with precision, ensuring seamless integration of financial solutions.",
-      icon: "⚙️"
+      title: "Design & Build",
+      description: "We design, prototype, and build scalable solutions with modern tech stacks and best practices.",
+      icon: "⚡"
     },
     {
-      title: "Active Management",
-      description: "Your portfolio is actively managed, rebalanced, and adjusted to changing markets and life circumstances.",
+      title: "Launch & Optimize",
+      description: "Your product or initiative goes live with performance tracking, user feedback loops, and optimization cycles.",
+      icon: "🚀"
+    },
+    {
+      title: "Scale & Evolve",
+      description: "We help you scale sustainably — expanding features, automating workflows, and refining strategy for long-term impact.",
       icon: "📈"
-    },
-    {
-      title: "Ongoing Review",
-      description: "We provide regular reporting, insights, and continuous optimization to keep your wealth on track.",
-      icon: "🔒"
     }
   ];
 
@@ -44,10 +44,10 @@ const ProcessSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-in slide-in-from-bottom-8 duration-1000">
-            Our Proven Process
+            Our Process
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-           A step-by-step financial journey designed to protect, grow, and optimize your wealth with confidence.
+            A clear, proven framework that transforms ideas into scalable products and sustainable growth.
           </p>
         </div>
 

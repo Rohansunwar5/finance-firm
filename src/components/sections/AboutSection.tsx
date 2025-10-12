@@ -4,10 +4,10 @@ const teamPhoto = "/cover.jpg";
 
 const AboutSection = () => {
   const achievements = [
-    "500+ Clients Guided to Financial Success",
-    "15+ Years of Wealth Management Expertise",
+    "500+ Investors Empowered",
+    "Strategic Access to Trusted Networks",
     "95% Client Retention Rate",
-    "Trusted Across 20+ Global Markets"
+    "Trusted Financial Bridge Across 20+ Markets"
   ];
 
   return (
@@ -16,14 +16,15 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-in slide-in-from-left-8 duration-1000">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-               Empowering Your Future
-              <span className="text-primary block">With Financial Expertise</span>
+                 Bridging Wealth & Opportunity
+              <span className="text-primary block">Through Smart Investments</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Since our inception, we've been committed to helping individuals, families, and businesses 
-              secure their financial futures. Our experienced advisors deliver tailored investment strategies, 
-              wealth planning solutions, and risk management services designed to build lasting prosperity.
+              At Ksheerabdhi Inc, we help individuals and businesses make smarter investment decisions by 
+              strategically guiding them on how to allocate and diversify their funds. We connect investors 
+              with our trusted private network, unlocking opportunities that drive sustainable growth 
+              while managing risk effectively.
             </p>
             
             <div className="space-y-4">

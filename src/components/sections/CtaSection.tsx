@@ -3,10 +3,10 @@ import { ArrowRight, CheckCircle, Calendar } from 'lucide-react';
 
 const CtaSection = () => {
   const benefits = [
-    "Confidential Wealth Advisory",
-    "Tailored Investment Strategies", 
-    "Dedicated Private Advisors",
-    "Long-Term Financial Growth"
+    "Strategic Fund Diversification",
+    "Access to Trusted Networks",
+    "Tailored Investment Strategies",
+    "Sustainable Wealth Growth"
   ];
 
   const scrollToSection = (id: string) => {
@@ -26,11 +26,12 @@ const CtaSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-in slide-in-from-bottom-8 duration-1000">
             <h2 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-6">
-              Protect & Grow 
-              <span className="block text-accent">Your Private Wealth</span>
+               Bridge Your Capital
+              <span className="block text-accent">To Smarter Opportunities</span>
             </h2>
             <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              Partner with our trusted advisors for bespoke financial strategies, discreet guidance, and long-term wealth preservation.
+              Partner with Ksheerabdhi Inc to strategically grow your funds, access trusted private networks, 
+              and unlock investment opportunities designed to maximize returns and minimize risk.
             </p>
           </div>
 
@@ -57,7 +58,7 @@ const CtaSection = () => {
               className="group px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
             >
               <Calendar className="w-5 h-5 mr-2" />
-              Schedule Private Consultation
+               Schedule a Consultation
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Button>
             
@@ -67,34 +68,34 @@ const CtaSection = () => {
               onClick={() => scrollToSection('services')}
               className="px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300"
             >
-              Explore Wealth Services
+              Explore Opportunities
             </Button>
           </div>
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/20 animate-in slide-in-from-bottom-8 duration-1000 delay-900">
             <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">15+</div>
+              <div className="text-primary-foreground/80">Years of Market Expertise</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">95%</div>
+              <div className="text-primary-foreground/80">Client Retention Rate</div>
+            </div>
+            <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">20+</div>
-              <div className="text-primary-foreground/80">Years of Trusted Advisory</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">100%</div>
-              <div className="text-primary-foreground/80">Confidentiality Assured</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">$5B+</div>
-              <div className="text-primary-foreground/80">Assets Under Guidance</div>
+              <div className="text-primary-foreground/80">Trusted Global Markets</div>
             </div>
           </div>
 
           {/* Contact Information */}
           <div className="mt-12 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 animate-in slide-in-from-bottom-8 duration-1000 delay-1000">
             <p className="text-primary-foreground/90 mb-4">
-              <strong>Take the next step.</strong> Contact our private advisory desk for discreet wealth management.
+              <strong>Take the next step.</strong> Partner with us to make your funds work smarter through strategic investment opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-primary-foreground/80">
               <a href="mailto:advisory@privatefinance.com" className="hover:text-accent transition-colors duration-300">
-                advisory@privatefinance.com
+                connect@ksheerabdhi.com
               </a>
               <span className="hidden sm:inline">|</span>
               <a href="tel:+1-212-555-7890" className="hover:text-accent transition-colors duration-300">

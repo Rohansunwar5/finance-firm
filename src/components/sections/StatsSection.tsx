@@ -4,11 +4,11 @@ const StatsSection = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0]);
   const [isVisible, setIsVisible] = useState(false);
 
- const stats = [
-    { value: 500, label: "Clients Served", suffix: "+" },
-    { value: 98, label: "Client Satisfaction", suffix: "%" },
-    { value: 200, label: "Million Assets Managed", suffix: "+" },
-    { value: 15, label: "Years of Expertise", suffix: "+" }
+  const stats = [
+    { value: 300, label: "Investors Empowered", suffix: "+" },
+    { value: 150, label: "Million Capital Allocated", suffix: "+" },
+    { value: 250, label: "Successful Partnerships", suffix: "+" },
+    { value: 98, label: "Client Satisfaction", suffix: "%" }
   ];
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const StatsSection = () => {
   const animateCounters = () => {
     stats.forEach((stat, index) => {
       let current = 0;
-      const increment = stat.value / 60; // 60 frames for 1 second at 60fps
+      const increment = stat.value / 60;
       const timer = setInterval(() => {
         current += increment;
         if (current >= stat.value) {
@@ -56,7 +56,7 @@ const StatsSection = () => {
             Our Impact in Numbers
           </h2>
           <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-            Trusted by individuals, families, and businesses worldwide to protect and grow wealth.
+            Empowering investors and businesses to grow through strategic investments and trusted networks.
           </p>
         </div>
 

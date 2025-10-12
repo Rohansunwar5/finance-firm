@@ -8,36 +8,28 @@ import {
 const FaqSection = () => {
   const faqs = [
     {
-      question: "What services do you provide as a private finance firm?",
-      answer: "We specialize in wealth management, investment advisory, retirement planning, estate structuring, and risk management. Our goal is to help clients preserve and grow their wealth with tailored financial strategies."
+      question: "What does Ksheerabdhi Inc specialize in?",
+      answer: "We connect individuals and businesses with investment and opportunities, offering strategic financial advisory, risk management, and capital allocation services tailored to your needs."
     },
     {
-      question: "Do you only work with high-net-worth individuals?",
-      answer: "While we serve many high-net-worth individuals and families, our services are also tailored for professionals, entrepreneurs, and institutions seeking expert financial planning and investment solutions."
+      question: "Who can benefit from your services?",
+      answer: "We work with investors, startups, SMEs, and institutions looking to grow, allocate, or manage funds efficiently. Our services cater to both private and corporate clients."
     },
     {
-      question: "How do you ensure my investments are secure?",
-      answer: "We work with regulated custodians and trusted financial institutions, follow strict compliance standards, and employ risk management strategies to protect and grow your capital responsibly."
+      question: "How do you ensure secure investments?",
+      answer: "We collaborate with regulated financial institutions, implement robust risk management strategies, and follow best practices to protect your capital while maximizing opportunities."
     },
     {
-      question: "What is your investment philosophy?",
-      answer: "Our philosophy focuses on long-term value creation through diversified portfolios, disciplined risk management, and a balanced mix of traditional and alternative investments. We always align strategies with your personal goals and risk tolerance."
+      question: "Can you assist with funding for projects or businesses?",
+      answer: "Yes. We facilitate access to funding and strategic investment networks, helping projects and businesses secure the right capital at the right time."
     },
     {
-      question: "Can you assist with retirement and estate planning?",
-      answer: "Yes. We create personalized retirement plans to ensure financial independence and help structure estates to optimize tax efficiency, succession, and wealth transfer to future generations."
+      question: "How transparent is your process?",
+      answer: "Transparency is central to our approach. We provide detailed reporting, ongoing updates, and clear insights to help clients make informed financial decisions."
     },
     {
-      question: "Do you provide corporate financial advisory services?",
-      answer: "Absolutely. We assist businesses with capital structuring, cash flow optimization, risk hedging, and strategic investment decisions tailored to long-term growth."
-    },
-    {
-      question: "How do you measure success in client relationships?",
-      answer: "We measure success by achieving your financial goals—whether that's growing wealth, preserving capital, or securing a legacy for your family. Regular performance reviews and transparent reporting keep you informed every step of the way."
-    },
-    {
-      question: "Do you offer confidential and personalized service?",
-      answer: "Yes. Confidentiality is central to our practice. Every strategy is custom-built around your financial goals, family priorities, and lifestyle needs."
+      question: "Do you offer personalized financial guidance?",
+      answer: "Absolutely. Every plan is customized to the client’s goals, risk profile, and investment horizon, ensuring maximum alignment with their objectives."
     }
   ];
 
@@ -49,7 +41,7 @@ const FaqSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-            Get answers to common questions about our consulting services and approach
+            Answers to common questions about how we connect people with investment and opportunities.
           </p>
         </div>
 
@@ -73,7 +65,7 @@ const FaqSection = () => {
 
           <div className="text-center mt-12 animate-in slide-in-from-bottom-8 duration-1000 delay-700">
             <p className="text-muted-foreground mb-6">
-              Still have questions? We're here to help.
+              Still have questions? Reach out and let’s discuss how we can assist you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -83,7 +75,7 @@ const FaqSection = () => {
                 Contact Our Team
               </a>
               <a 
-                href="tel:+1-555-123-4567"
+                href="tel:+91-9322284165"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-secondary transition-all duration-300"
               >
                 Call Us: +91 - 9322284165

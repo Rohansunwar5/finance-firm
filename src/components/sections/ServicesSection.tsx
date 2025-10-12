@@ -5,39 +5,69 @@ const ServicesSection = () => {
   const services = [
     {
       icon: TrendingUp,
-      title: "Wealth Management",
-      description: "Tailored strategies to grow, protect, and transfer wealth across generations.",
-      features: ["Portfolio Management", "Retirement Planning", "Estate Planning", "Asset Allocation"]
+      title: "Business Strategy & Growth",
+      description: "Unlock new opportunities with data-driven strategies designed to accelerate sustainable growth.",
+      features: [
+        "Market Positioning & Expansion",
+        "Business Model Innovation",
+        "Revenue Optimization",
+        "Strategic Partnerships"
+      ]
     },
     {
       icon: Users,
-      title: "Private Client Advisory",
-      description: "Personalized financial guidance to help you achieve long-term stability and success.",
-      features: ["Financial Planning", "Succession Advisory", "Trust Services", "Tax Efficiency"]
+      title: "Product & Experience Design",
+      description: "Build experiences users love through human-centered design, rapid iteration, and customer insight.",
+      features: [
+        "UX Research & Strategy",
+        "Product Prototyping",
+        "Customer Journey Mapping",
+        "Experience Innovation"
+      ]
     },
     {
       icon: Cog,
-      title: "Corporate Finance",
-      description: "Expert solutions to strengthen businesses with funding, structuring, and capital strategies.",
-      features: ["Mergers & Acquisitions", "Capital Structuring", "Debt Advisory", "Valuation Services"]
+      title: "Technology & Operations",
+      description: "Streamline operations with modern, scalable technology solutions tailored to your business.",
+      features: [
+        "Process Automation",
+        "Cloud Architecture & DevOps",
+        "Systems Integration",
+        "Operational Efficiency"
+      ]
     },
     {
       icon: BarChart3,
-      title: "Investment Solutions",
-      description: "Access diversified opportunities with data-driven investment strategies.",
-      features: ["Equities & Bonds", "Private Equity Access", "Alternative Investments", "Global Markets"]
+      title: "Data & Insights",
+      description: "Transform raw data into powerful insights that drive smarter decision-making and strategy.",
+      features: [
+        "Advanced Analytics",
+        "Data Strategy & Governance",
+        "Performance Dashboards",
+        "AI & Predictive Modeling"
+      ]
     },
     {
       icon: Shield,
-      title: "Risk & Insurance Planning",
-      description: "Comprehensive protection for your personal and business assets.",
-      features: ["Risk Assessment", "Insurance Advisory", "Hedging Strategies", "Crisis Preparedness"]
+      title: "Risk, Security & Compliance",
+      description: "Protect your business and customers with proactive risk management and compliance frameworks.",
+      features: [
+        "Security Assessments",
+        "Regulatory Compliance",
+        "Risk Mitigation Strategies",
+        "Business Continuity Planning"
+      ]
     },
     {
       icon: Target,
-      title: "Performance & Growth",
-      description: "Drive sustainable financial performance with strategies that maximize returns.",
-      features: ["Goal-Based Planning", "Performance Benchmarking", "Wealth Growth Strategies", "Continuous Monitoring"]
+      title: "Performance Acceleration",
+      description: "Turn strategy into measurable outcomes with continuous optimization and performance benchmarking.",
+      features: [
+        "Goal-Based Roadmapping",
+        "Operational KPIs & OKRs",
+        "Performance Benchmarking",
+        "Scaling Playbooks"
+      ]
     }
   ];
 
@@ -49,8 +79,7 @@ const ServicesSection = () => {
             Our Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive financial solutions designed to safeguard your wealth, grow your assets, 
-            and provide peace of mind for the future.
+            From strategy to execution — we help modern businesses scale, innovate, and thrive in an ever-evolving landscape.
           </p>
         </div>
         
