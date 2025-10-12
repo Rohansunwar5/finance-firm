@@ -24,12 +24,12 @@ const ClientsSection = () => {
   ];
 
   const clientLogos = [
-    "Investor Group A",
-    "Venture Partners B",
-    "SME Alliance C",
-    "Capital Network D",
-    "Institution E",
-    "Private Fund F",
+    { src: "/AtmosConstruction.png", alt: "Atmos Construction" },
+    { src: "/bhagyashreedevelopers.png", alt: "Bhagyashree Developers" },
+    { src: "/kadamgroup.webp", alt: "Kadam Group" },
+    { src: "/IconHomz.webp", alt: "IconHomz" },
+    { src: "/rojaincorp.png", alt: "Rojain Corp" },
+    { src: "/sizzleproperties.png", alt: "Sizzle Properties" },
   ];
 
   return (
@@ -46,9 +46,17 @@ const ClientsSection = () => {
               {clientLogos.concat(clientLogos).map((logo, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center px-8 py-4 mx-4 rounded-lg bg-white shadow-card hover:shadow-elegant transition-all duration-300"
+                  className="flex items-center justify-center px-12 py-8 mx-6 rounded-lg bg-black/5 backdrop-blur-sm shadow-card hover:shadow-elegant hover:bg-black/10 transition-all duration-300 min-w-[200px]"
                 >
-                  <span className="text-lg font-bold text-primary">{logo}</span>
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt}
+                    className="h-20 w-auto max-w-[180px] object-contain transition-all duration-300"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${logo.src}`);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
                 </div>
               ))}
             </div>

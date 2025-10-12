@@ -42,7 +42,7 @@ const Navigation = () => {
             <span className={`transition-colors duration-300 ${
               isScrolled ? 'text-primary' : 'text-white'
             }`}>
-              NameOfCompany
+              Ksheerabdhi Inc
             </span>
           </div>
 
