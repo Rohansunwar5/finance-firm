@@ -46,7 +46,7 @@ const AboutSection = () => {
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-elegant">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">15+</div>
+                  <div className="text-3xl font-bold">13+</div>
                   <div className="text-sm opacity-90">Years Experience</div>
                 </div>
               </div>

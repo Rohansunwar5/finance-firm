@@ -59,9 +59,9 @@ const Index = () => {
         <h4 className="font-semibold mb-4">Company</h4>
         <ul className="space-y-2 text-primary-foreground/80">
           <li>About Us</li>
-          <li>Leadership</li>
-          <li>Careers</li>
-          <li>Insights</li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
       
@@ -69,10 +69,10 @@ const Index = () => {
       <div>
         <h4 className="font-semibold mb-4">Contact Us</h4>
         <ul className="space-y-2 text-primary-foreground/80">
-          <li>contact@fintrustcapital.com</li>
-          <li>+91 98765 43210</li>
-          <li>15th Floor, Global Tower</li>
-          <li>Bangalore, India</li>
+          <li>mpsreenath1975@gmail.com</li>
+          <li>+91 9886074636</li>
+          <li>#49-2, Neeladri, Shankar Mutt Road, Shankarpuram, Basvangudi</li>
+          <li>Bangalore 560004, India</li>
         </ul>
       </div>
     </div>

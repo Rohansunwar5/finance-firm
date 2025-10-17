@@ -75,10 +75,10 @@ const FaqSection = () => {
                 Contact Our Team
               </a>
               <a 
-                href="tel:+91-9322284165"
+                // href="tel:+91-9322284165"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-secondary transition-all duration-300"
               >
-                Call Us: +91 - 9322284165
+                Call Us: +91 9886074636
               </a>
             </div>
           </div>

@@ -75,7 +75,7 @@ const CtaSection = () => {
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-white/20 animate-in slide-in-from-bottom-8 duration-1000 delay-900">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-foreground mb-2">13+</div>
               <div className="text-primary-foreground/80">Years of Market Expertise</div>
             </div>
             <div className="text-center">
@@ -95,11 +95,11 @@ const CtaSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-primary-foreground/80">
               <a href="mailto:advisory@privatefinance.com" className="hover:text-accent transition-colors duration-300">
-                connect@ksheerabdhi.com
+                mpsreenath1975@gmail.com 
               </a>
               <span className="hidden sm:inline">|</span>
               <a href="tel:+1-212-555-7890" className="hover:text-accent transition-colors duration-300">
-                +1 (212) 555-7890
+                +91 9886074636
               </a>
             </div>
           </div>

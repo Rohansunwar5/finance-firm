@@ -14,24 +14,19 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Our Headquarters",
-      details: ["Ksheerabdhi Inc.", "15th Floor, Skyline Tower", "Wall Street, New York, NY 10005"]
-    },
-    {
-      icon: Phone,
-      title: "Investor & Partner Relations",
-      details: ["+1 (212) 555-7890", "+1 (212) 555-4561"]
+      title: "Our Address",
+      details: ["Ksheerabdhi Inc.", "#49-2, Neeladri, Shankar Mutt Road, Shankarpuram, Basvangudi, Bangalore 560004"]
     },
     {
       icon: Mail,
       title: "Private Inquiries",
-      details: ["contact@ksheerabdhi.com", "partners@ksheerabdhi.com"]
+      details: [" Contact Number: ‪+91 9886074636", "Email: mpsreenath1975@gmail.com "]
     },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: By Appointment Only"]
-    }
+    // {
+    //   icon: Clock,
+    //   title: "Business Hours",
+    //   details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: By Appointment Only"]
+    // }
   ];
 
   return (

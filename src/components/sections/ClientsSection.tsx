@@ -26,7 +26,7 @@ const ClientsSection = () => {
   const clientLogos = [
     { src: "/AtmosConstruction.png", alt: "Atmos Construction" },
     { src: "/bhagyashreedevelopers.png", alt: "Bhagyashree Developers" },
-    { src: "/kadamgroup.webp", alt: "Kadam Group" },
+    { src: "/kadamgroup.png", alt: "Kadam Group" },
     { src: "/IconHomz.webp", alt: "IconHomz" },
     { src: "/rojaincorp.png", alt: "Rojain Corp" },
     { src: "/sizzleproperties.png", alt: "Sizzle Properties" },
@@ -44,9 +44,9 @@ const ClientsSection = () => {
           <div className="relative w-full overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap">
               {clientLogos.concat(clientLogos).map((logo, index) => (
-                <div
+                 <div
                   key={index}
-                  className="flex items-center justify-center px-12 py-8 mx-6 rounded-lg bg-black/5 backdrop-blur-sm shadow-card hover:shadow-elegant hover:bg-black/10 transition-all duration-300 min-w-[200px]"
+                  className="flex items-center justify-center px-12 py-8 mx-6 rounded-lg bg-black backdrop-blur-sm shadow-card hover:shadow-elegant hover:bg-black/90 transition-all duration-300 min-w-[200px]"
                 >
                   <img 
                     src={logo.src} 

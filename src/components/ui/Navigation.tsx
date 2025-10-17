@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Waves } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +18,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
+    { label: "Mission", href: "#services" },
     { label: "Clients", href: "#clients" },
     { label: "Contact", href: "#contact" }
   ];
@@ -38,12 +38,33 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-bold text-2xl">
-            <span className={`transition-colors duration-300 ${
-              isScrolled ? 'text-primary' : 'text-white'
-            }`}>
-              Ksheerabdhi Inc
-            </span>
+          <div className="flex items-center gap-2 group cursor-pointer" onClick={() => scrollToSection('#home')}>
+            {/* Icon */}
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
+              isScrolled 
+                ? 'bg-gradient-to-br from-blue-600 to-cyan-600' 
+                : 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-white/30'
+            } group-hover:scale-110`}>
+              <Waves className="w-6 h-6 text-white" />
+            </div>
+            
+            {/* Text Logo */}
+            <div className="flex flex-col leading-none">
+              <span className={`font-bold text-xl tracking-tight transition-all duration-300 ${
+                isScrolled 
+                  ? 'text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text' 
+                  : 'text-white'
+              } group-hover:scale-105 inline-block`}
+              style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}>
+                Ksheerabdhi
+              </span>
+              <span className={`text-xs font-medium tracking-widest transition-colors duration-300 ${
+                isScrolled ? 'text-slate-600' : 'text-blue-200'
+              }`}
+              style={{ fontFamily: "'Inter', sans-serif" }}>
+                INCORPORATED
+              </span>
+            </div>
           </div>
 
           {/* Desktop Navigation */}
@@ -102,6 +123,12 @@ const Navigation = () => {
           </div>
         )}
       </div>
+
+      {/* Google Fonts Link - Add this to your HTML head if not already present */}
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500&display=swap" 
+        rel="stylesheet" 
+      />
     </nav>
   );
 };
