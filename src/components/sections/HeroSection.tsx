@@ -60,44 +60,44 @@ const HeroSection = () => {
           <span className="text-sm font-medium text-blue-100">Smart Investment Solutions</span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-in slide-in-from-bottom-8 duration-1000 delay-150">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 md:mb-6 animate-in slide-in-from-bottom-8 duration-1000 delay-150 px-2">
           Bridging Wealth & Opportunity
           <span className="block text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text mt-2">
             Through Smarter Investments
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-slate-200 animate-in slide-in-from-bottom-8 duration-1000 delay-300 leading-relaxed">
+        <p className="hidden sm:block text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto text-slate-200 animate-in slide-in-from-bottom-8 duration-1000 delay-300 leading-relaxed px-4">
           At Ksheerabdhi Inc, we help individuals and businesses strategically grow their funds by connecting them with trusted networks and high-potential investment opportunities.
         </p>
 
         {/* Feature Pills */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10 animate-in slide-in-from-bottom-8 duration-1000 delay-450">
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-            <Shield className="w-4 h-4 text-blue-400" />
-            <span className="text-sm">Trusted Networks</span>
+        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-10 animate-in slide-in-from-bottom-8 duration-1000 delay-450 px-4">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-white/20">
+            <Shield className="w-3 md:w-4 h-3 md:h-4 text-blue-400" />
+            <span className="text-xs md:text-sm">Trusted Networks</span>
           </div>
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-            <TrendingUp className="w-4 h-4 text-green-400" />
-            <span className="text-sm">Strategic Growth</span>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-white/20">
+            <TrendingUp className="w-3 md:w-4 h-3 md:h-4 text-green-400" />
+            <span className="text-xs md:text-sm">Strategic Growth</span>
           </div>
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-            <Users className="w-4 h-4 text-purple-400" />
-            <span className="text-sm">Expert Guidance</span>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-white/20">
+            <Users className="w-3 md:w-4 h-3 md:h-4 text-purple-400" />
+            <span className="text-xs md:text-sm">Expert Guidance</span>
           </div>
         </div>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in slide-in-from-bottom-8 duration-1000 delay-600">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center animate-in slide-in-from-bottom-8 duration-1000 delay-600 px-4">
           <Button 
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-6 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold rounded-full shadow-lg hover:shadow-blue-500/50 transition-all duration-300 group"
             size="lg" 
             onClick={() => scrollToSection('services')}
           >
             Explore Our Services
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 w-4 md:w-5 h-4 md:h-5 group-hover:translate-x-1 transition-transform" />
           </Button>
           <Button 
-            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-6 text-lg font-semibold rounded-full border-2 border-white/30 hover:border-white/50 transition-all duration-300"
+            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-6 md:px-8 py-5 md:py-6 text-base md:text-lg font-semibold rounded-full border-2 border-white/30 hover:border-white/50 transition-all duration-300"
             size="lg" 
             onClick={() => scrollToSection('contact')}
           >
