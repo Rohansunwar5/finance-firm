@@ -177,7 +177,7 @@ const Team = () => {
 
               <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 <p className="text-slate-700 leading-relaxed text-lg">
-                  Our approach is rooted in <strong>understanding</strong> — understanding our clients' goals, their challenges, and the opportunities that lie ahead. We take pride in offering transparent, strategic, and sustainable financial solutions that help our clients grow with confidence.
+                  Our approach is rooted in <strong>understanding</strong> our clients' goals, their challenges, and the opportunities that lie ahead. We take pride in offering transparent, strategic, and sustainable financial solutions that help our clients grow with confidence.
                 </p>
               </div>
 
