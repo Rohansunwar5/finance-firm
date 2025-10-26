@@ -1,10 +1,13 @@
+// components/ui/Navigation.tsx
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Waves } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,19 +19,33 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Mission", href: "#services" },
-    { label: "Clients", href: "#clients" },
-    { label: "Contact", href: "#contact" }
-  ];
+  { label: "Home", href: "#home", isRoute: false },     // <-- Fix here!
+  { label: "Mission", href: "#services", isRoute: false },
+  { label: "Team", href: "/team", isRoute: true },
+  { label: "Clients", href: "#clients", isRoute: false },
+  { label: "Contact", href: "#contact", isRoute: false }
+];
+
 
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // If we're not on the home page and trying to access a hash section
+    if (location.pathname !== '/' && href.startsWith('#')) {
+      window.location.href = '/' + href;
+    } else if (href.startsWith('#')) {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    if (location.pathname !== '/') {
+      window.location.href = '/#contact';
+    } else {
+      scrollToSection('#contact');
+    }
   };
 
   return (
@@ -38,7 +55,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2 group cursor-pointer" onClick={() => scrollToSection('#home')}>
+          <Link to="/" className="flex items-center gap-2 group cursor-pointer">
             {/* Icon */}
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
               isScrolled 
@@ -65,24 +82,36 @@ const Navigation = () => {
                 INCORPORATED
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className={`font-medium transition-colors duration-300 hover:text-primary ${
-                  isScrolled ? 'text-foreground' : 'text-white hover:text-accent'
-                }`}
-              >
-                {item.label}
-              </button>
+              item.isRoute ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`font-medium transition-colors duration-300 hover:text-primary ${
+                    isScrolled ? 'text-foreground' : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => scrollToSection(item.href)}
+                  className={`font-medium transition-colors duration-300 hover:text-primary ${
+                    isScrolled ? 'text-foreground' : 'text-white hover:text-accent'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              )
             ))}
             <Button 
               variant={isScrolled ? "primary" : "hero"}
-              onClick={() => scrollToSection('#contact')}
+              onClick={handleContactClick}
             >
               Get Started
             </Button>
@@ -105,18 +134,29 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white shadow-card rounded-lg mt-2 p-4 animate-in slide-in-from-top-4 duration-300">
             {navItems.map((item) => (
-              <button
-                key={item.label}
-                onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-3 text-foreground hover:text-primary font-medium transition-colors duration-300"
-              >
-                {item.label}
-              </button>
+              item.isRoute ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block w-full text-left py-3 text-foreground hover:text-primary font-medium transition-colors duration-300"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  onClick={() => scrollToSection(item.href)}
+                  className="block w-full text-left py-3 text-foreground hover:text-primary font-medium transition-colors duration-300"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
             <Button 
               variant="primary" 
               className="w-full mt-4"
-              onClick={() => scrollToSection('#contact')}
+              onClick={handleContactClick}
             >
               Get Started
             </Button>
@@ -124,7 +164,7 @@ const Navigation = () => {
         )}
       </div>
 
-      {/* Google Fonts Link - Add this to your HTML head if not already present */}
+      {/* Google Fonts Link */}
       <link 
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@500&display=swap" 
         rel="stylesheet" 
