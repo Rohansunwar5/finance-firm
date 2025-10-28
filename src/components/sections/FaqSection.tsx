@@ -29,63 +29,74 @@ const FaqSection = () => {
     },
     {
       question: "Do you offer personalized financial guidance?",
-      answer: "Absolutely. Every plan is customized to the client’s goals, risk profile, and investment horizon, ensuring maximum alignment with their objectives."
+      answer: "Absolutely. Every plan is customized to the client's goals, risk profile, and investment horizon, ensuring maximum alignment with their objectives."
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 animate-in slide-in-from-bottom-8 duration-1000">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
-            Answers to common questions about how we connect people with investment and opportunities.
+  <section className="py-20 relative overflow-hidden bg-gradient-to-b from-[#0a1730] via-[#0a1730] to-[#081325]">
+    {/* Decorative glow elements */}
+    <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[#FFD700]/10 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[#C0C0C0]/10 rounded-full blur-3xl"></div>
+    
+    <div className="container mx-auto px-6 relative z-10">
+      {/* Heading */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#FFD700] mb-6 animate-in slide-in-from-bottom-8 duration-1000">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-xl text-gray-200 max-w-3xl mx-auto animate-in slide-in-from-bottom-8 duration-1000 delay-300">
+          Answers to common questions about how we connect people with investment and opportunities.
+        </p>
+      </div>
+
+      {/* Accordion */}
+      <div className="max-w-4xl mx-auto">
+        <Accordion 
+          type="single" 
+          collapsible 
+          className="space-y-4 animate-in slide-in-from-bottom-8 duration-1000 delay-500"
+        >
+          {faqs.map((faq, index) => (
+            <AccordionItem 
+              key={index} 
+              value={`item-${index}`}
+              className="bg-white/5 backdrop-blur-sm border border-[#FFD700]/20 rounded-lg px-6 hover:bg-white/10 hover:border-[#FFD700]/40 transition-all duration-300"
+            >
+              <AccordionTrigger className="text-left hover:text-[#FFD700] py-6 text-lg font-medium text-white">
+                {faq.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-300 pb-6 text-base leading-relaxed">
+                {faq.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-12 animate-in slide-in-from-bottom-8 duration-1000 delay-700">
+          <p className="text-gray-200 mb-6">
+            Still have questions? Reach out and let's discuss how we can assist you.
           </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4 animate-in slide-in-from-bottom-8 duration-1000 delay-500">
-            {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6 hover:shadow-card transition-all duration-300"
-              >
-                <AccordionTrigger className="text-left hover:text-primary py-6 text-lg font-medium">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-
-          <div className="text-center mt-12 animate-in slide-in-from-bottom-8 duration-1000 delay-700">
-            <p className="text-muted-foreground mb-6">
-              Still have questions? Reach out and let’s discuss how we can assist you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="#contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:shadow-elegant transition-all duration-300 hover:-translate-y-1"
-              >
-                Contact Our Team
-              </a>
-              <a 
-                // href="tel:+91-9322284165"
-                className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-secondary transition-all duration-300"
-              >
-                Call Us: +91 9886074636
-              </a>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="#contact"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[#FFD700] text-[#0a1730] font-semibold rounded-lg hover:bg-[#e6c200] hover:shadow-[0_0_15px_#FFD700]/40 transition-all duration-300 hover:-translate-y-1"
+            >
+              Contact Our Team
+            </a>
+            <a 
+              className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#FFD700]/40 text-[#FFD700] rounded-lg hover:bg-[#FFD700]/10 hover:border-[#FFD700]/60 transition-all duration-300"
+            >
+              Call Us: +91 9886074636
+            </a>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 };
 
 export default FaqSection;

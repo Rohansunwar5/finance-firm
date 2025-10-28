@@ -19,13 +19,12 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-  { label: "Home", href: "#home", isRoute: false },     // <-- Fix here!
-  { label: "Mission", href: "#services", isRoute: false },
-  { label: "Team", href: "/team", isRoute: true },
-  { label: "Clients", href: "#clients", isRoute: false },
-  { label: "Contact", href: "#contact", isRoute: false }
-];
-
+    { label: "Home", href: "#home", isRoute: false },   
+    { label: "Mission", href: "#services", isRoute: false },
+    { label: "Our Team", href: "/team", isRoute: true },
+    { label: "Clients", href: "#clients", isRoute: false },
+    { label: "Contact", href: "#contact", isRoute: false }
+  ];
 
   const scrollToSection = (href: string) => {
     // If we're not on the home page and trying to access a hash section
@@ -50,7 +49,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-card' : 'bg-transparent'
+      isScrolled ? 'bg-[#0a1730]/95 backdrop-blur-md shadow-xl shadow-[#FFD700]/5' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
@@ -59,24 +58,24 @@ const Navigation = () => {
             {/* Icon */}
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
               isScrolled 
-                ? 'bg-gradient-to-br from-blue-600 to-cyan-600' 
-                : 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-sm border border-white/30'
+                ? 'bg-[#FFD700]' 
+                : 'bg-[#FFD700]/20 backdrop-blur-sm border border-[#FFD700]/30'
             } group-hover:scale-110`}>
-              <Waves className="w-6 h-6 text-white" />
+              <Waves className="w-6 h-6 text-[#0a1730]" />
             </div>
             
             {/* Text Logo */}
             <div className="flex flex-col leading-none">
               <span className={`font-bold text-xl tracking-tight transition-all duration-300 ${
                 isScrolled 
-                  ? 'text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text' 
+                  ? 'text-[#FFD700]' 
                   : 'text-white'
               } group-hover:scale-105 inline-block`}
               style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}>
                 Ksheerabdhi
               </span>
               <span className={`text-xs font-medium tracking-widest transition-colors duration-300 ${
-                isScrolled ? 'text-slate-600' : 'text-blue-200'
+                isScrolled ? 'text-gray-300' : 'text-[#FFD700]/70'
               }`}
               style={{ fontFamily: "'Inter', sans-serif" }}>
                 INCORPORATED
@@ -91,8 +90,8 @@ const Navigation = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`font-medium transition-colors duration-300 hover:text-primary ${
-                    isScrolled ? 'text-foreground' : 'text-white hover:text-accent'
+                  className={`font-medium transition-colors duration-300 ${
+                    isScrolled ? 'text-white hover:text-[#FFD700]' : 'text-white hover:text-[#FFD700]'
                   }`}
                 >
                   {item.label}
@@ -101,8 +100,8 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className={`font-medium transition-colors duration-300 hover:text-primary ${
-                    isScrolled ? 'text-foreground' : 'text-white hover:text-accent'
+                  className={`font-medium transition-colors duration-300 ${
+                    isScrolled ? 'text-white hover:text-[#FFD700]' : 'text-white hover:text-[#FFD700]'
                   }`}
                 >
                   {item.label}
@@ -110,7 +109,7 @@ const Navigation = () => {
               )
             ))}
             <Button 
-              variant={isScrolled ? "primary" : "hero"}
+              className="bg-[#FFD700] text-[#0a1730] hover:bg-[#e6c200] font-semibold px-6 transition-all duration-300 hover:scale-105"
               onClick={handleContactClick}
             >
               Get Started
@@ -123,23 +122,23 @@ const Navigation = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-white'}`} />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-white'}`} />
+              <Menu className="w-6 h-6 text-white" />
             )}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white shadow-card rounded-lg mt-2 p-4 animate-in slide-in-from-top-4 duration-300">
+          <div className="md:hidden bg-[#13294b]/95 backdrop-blur-md border border-[#FFD700]/20 rounded-lg mt-2 p-4 animate-in slide-in-from-top-4 duration-300">
             {navItems.map((item) => (
               item.isRoute ? (
                 <Link
                   key={item.label}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-left py-3 text-foreground hover:text-primary font-medium transition-colors duration-300"
+                  className="block w-full text-left py-3 text-white hover:text-[#FFD700] font-medium transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
@@ -147,15 +146,14 @@ const Navigation = () => {
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left py-3 text-foreground hover:text-primary font-medium transition-colors duration-300"
+                  className="block w-full text-left py-3 text-white hover:text-[#FFD700] font-medium transition-colors duration-300"
                 >
                   {item.label}
                 </button>
               )
             ))}
             <Button 
-              variant="primary" 
-              className="w-full mt-4"
+              className="w-full mt-4 bg-[#FFD700] text-[#0a1730] hover:bg-[#e6c200] font-semibold"
               onClick={handleContactClick}
             >
               Get Started
