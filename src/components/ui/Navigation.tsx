@@ -55,33 +55,16 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group cursor-pointer">
-            {/* Icon */}
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
-              isScrolled 
-                ? 'bg-[#FFD700]' 
-                : 'bg-[#FFD700]/20 backdrop-blur-sm border border-[#FFD700]/30'
-            } group-hover:scale-110`}>
-              <Waves className="w-6 h-6 text-[#0a1730]" />
-            </div>
-            
-            {/* Text Logo */}
-            <div className="flex flex-col leading-none">
-              <span className={`font-bold text-xl tracking-tight transition-all duration-300 ${
-                isScrolled 
-                  ? 'text-[#FFD700]' 
-                  : 'text-white'
-              } group-hover:scale-105 inline-block`}
-              style={{ fontFamily: "'Playfair Display', 'Georgia', serif" }}>
-                Ksheerabdhi
-              </span>
-              <span className={`text-xs font-medium tracking-widest transition-colors duration-300 ${
-                isScrolled ? 'text-gray-300' : 'text-[#FFD700]/70'
-              }`}
-              style={{ fontFamily: "'Inter', sans-serif" }}>
-                INCORPORATED
-              </span>
-            </div>
-          </Link>
+  <img 
+    src="/logo.png" 
+    alt="Ksheerabdhi Inc Logo" 
+    className={`h-24 w-auto transition-all duration-300 ${
+      isScrolled ? 'brightness-100' : 'brightness-100'
+    } group-hover:scale-110`}
+  />
+</Link>
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
